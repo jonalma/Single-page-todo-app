@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // server.js  - Node configuration   
 // https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
 
@@ -11,6 +12,7 @@
 
 
     // set up ========================
+
     var express  = require('express');
     var app      = express();                               // create our app w/ express
     var mongoose = require('mongoose');                     // mongoose for mongodb
@@ -28,7 +30,6 @@
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
-
 
     // define model ====================
     var Todo = mongoose.model('Todo', {
@@ -101,3 +102,8 @@
     // listen (start app with node server.js) ======================================
     app.listen(3000);
     console.log("App listening on port 3000");
+=======
+    // listen (start app with node server.js) ======================================
+    app.listen(3000);
+    console.log("App listening on port 3000");
+
