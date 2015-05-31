@@ -35,8 +35,10 @@ function mainController($scope,$http){
     // delete a todo after checking it
     $scope.deleteTodo = function(id){
         $http.delete('api/todos/' + id)
+            // if successful creation, call our get function to get all the new todos
             .success(function(data){
-            console.log(data);
+                $scope.todos = data; // assign our new list of todos
+                console.log(data);
         })
         .error(function(data){
             console.log('Error: ' + data);
