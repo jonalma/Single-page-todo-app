@@ -1,4 +1,6 @@
 // holds the configuration for our app
+// npm configuration to install dependencies/modules 
+
 
 {
   "name"         : "node-todo",
