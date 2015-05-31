@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // server.js  - Node configuration   
 // https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
 
@@ -40,7 +39,7 @@
     // ROUTES =================================================
     app.get('/api/todos', function(req,res){
         // use mongoose to get all todos in the database
-        Todo.find(function(){
+        Todo.find(function(err,todos){
             // if there is an error retrieving, send the error. nothing after res.send(err) will execute
             if (err)
                 res.send(err)
@@ -102,8 +101,3 @@
     // listen (start app with node server.js) ======================================
     app.listen(3000);
     console.log("App listening on port 3000");
-=======
-    // listen (start app with node server.js) ======================================
-    app.listen(3000);
-    console.log("App listening on port 3000");
-
